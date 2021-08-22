@@ -8,7 +8,7 @@ const findIntervals = (start: number, end: number, interval: number): number[] =
     return values;
 }
 
-export const handleWildcard = (value: string, unit: keyof CornRange): number[] => {
+export const handleStar = (value: string, unit: keyof CornRange): number[] => {
     if (value === '*') {
         return Array.from({length: cronRange[unit].total}, (v, k) => k + cronRange[unit].min)
     } else {
