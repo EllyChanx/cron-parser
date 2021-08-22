@@ -35,3 +35,8 @@ Please ensure your `Node` is v13.2.0+
 | day of week    | `0-7` (`0` & `7` is Sun)                                 | `*` `,` `-` `/`            | Yes        |
 
 The order of the fields must be preserved.
+
+## To do
+* Handle range intervals (e.g. `15-35/15` should return `15 30` for minute)
+* Handle abbreviation for months (`jan`-`dec`) and day of week (`sun`-`sat`)
+* Handle year params
