@@ -1,9 +1,5 @@
 import { CornRange } from './utils';
-import { validateRange } from './commaParser';
-
-const validateStartBeforeEnd = (start: number, end: number, unit: keyof CornRange) => {
-    if (end < start) throw Error(`Range provided for unit: ${unit} is the wrong way around`)
-}
+import { validateRange, validateStartBeforeEnd } from './validator';
 
 export const handleDash = (value: string, unit: keyof CornRange): number[] => {
     const [start, end] = value.split('-').map(n => {

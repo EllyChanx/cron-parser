@@ -1,10 +1,5 @@
-import { CornRange, cronRange } from './utils';
-
-export const validateRange = (value: number, unit: keyof CornRange) => {
-    if (value > cronRange[unit].max || value < cronRange[unit].min) {
-        throw Error(`Value(s) provided for unit: ${unit} is our of range`)
-    }
-}
+import { CornRange } from './utils';
+import { validateRange } from './validator';
 
 export const handleComma = (value: string, unit: keyof CornRange): number[] => {
     return value.split(',').map(n => {
