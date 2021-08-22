@@ -1,14 +1,16 @@
 import { CornRange } from './utils';
 import { handleWildcard } from './wildcardParser';
 import { handleComma } from './commaParser';
+import { handleDash } from './dashParser';
 
 const parseUnit = (rawStr: string, unit: keyof CornRange): number[] => {
     if (rawStr.includes('*')) {
         return handleWildcard(rawStr, unit)
     } else if (rawStr.includes(',')) {
         return handleComma(rawStr, unit)
-    }
-    else {
+    } else if (rawStr.includes('-')) {
+        return handleDash(rawStr, unit)
+    } else {
         return [Number(rawStr)]
     }
 }
