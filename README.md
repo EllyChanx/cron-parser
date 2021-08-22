@@ -25,7 +25,7 @@ Please ensure your `Node` is v13.2.0+
 ### Run Test
 * `npm t` to run the jest tests
 
-### Allowed values
+## Allowed values
 | Field          | Allowed Values                                           | Allowed special characters | Mandatory? |
 | -----------    | -----------                                              | -----------                | ---------- |
 | minute         | `0-59`                                                   | `*` `,` `-` `/`            | Yes        |
